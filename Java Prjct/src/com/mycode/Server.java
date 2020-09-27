@@ -63,11 +63,6 @@ public class Server extends JFrame implements ActionListener{
         l3.setBounds(120,10,100,20);
         p1.add(l3);
 
-        JLabel l4 = new JLabel("Chat activo");
-        l4.setFont(new Font("SAN_SERIF", Font.PLAIN, 13));
-        l4.setForeground(Color.WHITE);
-        l4.setBounds(120,35,100,20);
-        p1.add(l4);
 
         t1 = new JTextField();
         t1.setBounds(320,650,425,30);
@@ -123,15 +118,19 @@ public class Server extends JFrame implements ActionListener{
         String msgInput = "";
         try{
             skt = new ServerSocket(6001);
-            s = skt.accept();
-            din = new DataInputStream(s.getInputStream());
-            dout = new DataOutputStream(s.getOutputStream());
+            while(true) {
+                s = skt.accept();
+                din = new DataInputStream(s.getInputStream());
+                dout = new DataOutputStream(s.getOutputStream());
 
-            msgInput = din.readUTF();
-            a1.setText(a1.getText()+"\n"+msgInput);
+                while (true) {
+                    msgInput = din.readUTF();
+                    a1.setText(a1.getText() + "\n" + msgInput);
 
-            skt.close();
-            s.close();
+                    skt.close();
+//                    s.close();
+                }
+            }
 
         }catch(Exception e){}
     }

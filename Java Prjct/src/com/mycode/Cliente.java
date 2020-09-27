@@ -54,11 +54,6 @@ public class Cliente extends JFrame implements ActionListener{
         l3.setBounds(120,10,100,20);
         p1.add(l3);
 
-        JLabel l4 = new JLabel("Chat activo");
-        l4.setFont(new Font("SAN_SERIF", Font.PLAIN, 13));
-        l4.setForeground(Color.WHITE);
-        l4.setBounds(120,35,100,20);
-        p1.add(l4);
 
         t1 = new JTextField();
         t1.setBounds(320,650,425,30);
@@ -109,7 +104,9 @@ public class Cliente extends JFrame implements ActionListener{
 
             t1.setText("");
 
-        }catch(Exception e) { }
+        }catch(Exception e) {
+            System.out.println(e);
+        }
     }
 
     public static void main(String[] args){
@@ -123,9 +120,13 @@ public class Cliente extends JFrame implements ActionListener{
 
             String msginput = " ";
 
-            msginput = din.readUTF();
-            a1.setText(a1.getText()+"\n"+msginput);
+            while(true){
+                msginput = din.readUTF();
+                a1.setText(a1.getText() + "\n" + msginput);
 
+
+
+            }
         }catch(Exception e){}
     }
 }
