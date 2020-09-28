@@ -85,7 +85,6 @@ public class Cliente extends JFrame implements ActionListener{
         setLayout(null);
         setSize(900, 700);
         setLocation(500, 50);
-//        setVisible(true);
         setUndecorated(true);
         setVisible(true);
 

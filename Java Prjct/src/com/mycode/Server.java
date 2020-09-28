@@ -28,14 +28,14 @@ public class Server extends JFrame implements ActionListener{
 
     Server(){
 
-//      Panel Superior-------------------------------------
+//      Superior panel-------------------------------------
         p1 = new JPanel();
         p1.setLayout(null);
         p1.setBackground(new Color(7,94,94));
         p1.setBounds(300,0,600,70);
         add(p1);
 
-
+//      Icons
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("com/mycode/Iconos/bck1.png"));
         Image i2 = i1.getImage().getScaledInstance(30,30, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
@@ -94,7 +94,6 @@ public class Server extends JFrame implements ActionListener{
         setLayout(null);
         setSize(900, 700);
         setLocation(-100, 50);
-//        setVisible(true);
         setUndecorated(true);
         setVisible(true);
 
