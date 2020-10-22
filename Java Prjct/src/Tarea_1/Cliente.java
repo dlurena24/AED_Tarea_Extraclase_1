@@ -1,4 +1,4 @@
-package com.mycode;
+package Tarea_1;
 
 import javax.swing.*;
 import java.awt.*;
@@ -27,7 +27,7 @@ public class Cliente extends JFrame implements ActionListener{
         add(p1);
 
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("com/mycode/Iconos/bck1.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Tarea_1/Iconos/bck1.png"));
         Image i2 = i1.getImage().getScaledInstance(30,30, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l1 = new JLabel(i1);
@@ -41,7 +41,7 @@ public class Cliente extends JFrame implements ActionListener{
             }
         });
 
-        ImageIcon i4 = new ImageIcon(ClassLoader.getSystemResource("com/mycode/Iconos/11.png"));
+        ImageIcon i4 = new ImageIcon(ClassLoader.getSystemResource("Tarea_1/Iconos/11.png"));
         Image i5 = i4.getImage().getScaledInstance(30,30, Image.SCALE_DEFAULT);
         ImageIcon i6 = new ImageIcon(i5);
         JLabel l2 = new JLabel(i4);

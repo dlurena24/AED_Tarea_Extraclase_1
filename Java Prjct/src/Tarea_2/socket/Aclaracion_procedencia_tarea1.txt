@@ -1,0 +1,2 @@
+Esta tarea 2 fue hecha a partir de la tarea 1 del estudiante Joel Gomez Araya,
+debido a que la tarea 1 de mi autoria tenia ciertas deficiencias en el codigo.
